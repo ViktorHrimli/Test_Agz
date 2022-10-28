@@ -20,4 +20,21 @@ const UserCard = styled.li`
   }
 `;
 
-export { UserCard };
+const UserEnmail = styled.p`
+  position: relative;
+  cursor: pointer;
+  :hover::after {
+    position: absolute;
+    top: 20px;
+    left: auto;
+    content: '${p => p.children}';
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+  }
+`;
+export { UserCard, UserEnmail };
