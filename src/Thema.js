@@ -8,8 +8,9 @@ export const theme = {
     error: '#CB3D40',
     disable: '#B4B4B4',
     border: '#D0CFCF',
+    hover: '#FFE302',
   },
-  space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
+  space: [0, 2, 4, 8, 16, 20, 32, 50, 64, 100, 128, 256],
   fonts: {
     Nunito: 'Nunito',
   },

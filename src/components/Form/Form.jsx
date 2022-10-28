@@ -26,6 +26,7 @@ const FormRegistration = () => {
 
     setData(formData);
     setValueUpload('');
+    setIsButtonDisable(false);
     event.currentTarget.reset();
   };
 
@@ -134,103 +135,4 @@ const FormRegistration = () => {
     </div>
   );
 };
-
-// import { Box } from 'commonStyle/Common.styled';
-// import * as yup from 'yup';
-// import { Formik, Field } from 'formik';
-// import { forwardRef, useRef, createRef } from 'react';
-// import {
-//   Forms,
-//   LabelCheckBox,
-//   FormButtons,
-//   Radio,
-//   Input,
-//   InputFile,
-//   ButtonUpload,
-// } from './Form.styled';
-
-// const schema = yup.object().shape({
-//   name: yup.string().min(2).required(),
-//   email: yup.string().email().required(),
-//   phone: yup.string().required(),
-//   checked: yup.string().required(),
-//   file: yup.string().required(),
-// });
-
-// const FormRegistration = () => {
-//   const initialState = {
-//     name: '',
-//     email: '',
-//     phone: '',
-//     checked: '',
-//     file: '',
-//   };
-//   const wtf = useRef();
-//   const onClickButton = e => {
-//     console.log(wtf.current.click());
-//   };
-
-//   const handleSubmit = (values, { resetForm }) => {
-//     console.log(values);
-//     resetForm();
-//   };
-
-//   return (
-//     <div>
-//       <Formik
-//         onSubmit={handleSubmit}
-//         initialValues={initialState}
-//         validationSchema={schema}
-//       >
-//         <Forms>
-//           <Box display="flex" flexDirection="column" gridGap="50px">
-//             <Input type="input" name="name" placeholder="Your name" />
-//             <Input type="input" name="email" placeholder="Email" />
-//             <Input type="input" name="phone" placeholder="Phone" />
-//           </Box>
-//           <Box
-//             display="flex"
-//             flexDirection="column"
-//             alignItems="flex-start"
-//             gridGap="9px"
-//             mr="auto"
-//           >
-//             <p>Select your position</p>
-
-//             <LabelCheckBox>
-//               <Radio type="radio" name="checked" value="Frontend developer" />
-//               Frontend developer
-//             </LabelCheckBox>
-//             <LabelCheckBox>
-//               <Radio type="radio" name="checked" value="Backend developer" />
-//               Backend developer
-//             </LabelCheckBox>
-//             <LabelCheckBox>
-//               <Radio type="radio" name="checked" value="Designer" />
-//               Designer
-//             </LabelCheckBox>
-//             <LabelCheckBox>
-//               <Radio type="radio" name="checked" value="QA" />
-//               QA
-//             </LabelCheckBox>
-//           </Box>
-//           <InputFile
-//             type="file"
-//             name="file"
-//             accept="image/jpeg, image/png, image/jpg"
-//             ref={wtf}
-//           />
-
-//           <ButtonUpload onClick={onClickButton} type="button">
-//             Upload
-//           </ButtonUpload>
-//           <FormButtons type="submit" flag={true}>
-//             Submit
-//           </FormButtons>
-//         </Forms>
-//       </Formik>
-//     </div>
-//   );
-// };
-
 export { FormRegistration };

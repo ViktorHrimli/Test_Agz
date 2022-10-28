@@ -22,12 +22,13 @@ const UserCard = styled.li`
 
 const UserEnmail = styled.p`
   position: relative;
+  text-align: center;
   cursor: pointer;
   :hover::after {
     position: absolute;
     top: 20px;
     left: auto;
-    content: '${p => p.children}';
+    content: '${p => p.prop}';
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -37,4 +38,22 @@ const UserEnmail = styled.p`
     color: white;
   }
 `;
-export { UserCard, UserEnmail };
+
+const UserText = styled(UserEnmail)`
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-flex;
+  :hover::after {
+    position: absolute;
+    top: 20px;
+    left: auto;
+  }
+`;
+
+const UserImg = styled.img`
+  border-radius: ${p => p.theme.radii.round};
+  width: 70px;
+  height: 70px;
+  margin-bottom: ${p => p.theme.space[5]}px;
+`;
+export { UserCard, UserEnmail, UserImg, UserText };

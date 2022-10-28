@@ -100,6 +100,10 @@ const Button = styled.button`
   background-color: ${p => p.theme.colors.primary};
   color: inherit;
   cursor: pointer;
+  :hover,
+  :focus {
+    background-color: ${p => p.theme.colors.hover};
+  }
 `;
 
 const TitleText = styled.h2`

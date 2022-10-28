@@ -1,16 +1,19 @@
-import { UserCard, UserEnmail } from './UsersItems.styled';
-import { Box, Text } from 'commonStyle/Common.styled';
+import { UserCard, UserEnmail, UserImg, UserText } from './UsersItems.styled';
+import { Text } from 'commonStyle/Common.styled';
+import { sliceLongText } from 'components/Utils/SliceLongText';
 
-const UsersItems = ({ id, email, photo, name, position, phone }) => {
+const UsersItems = ({ email, photo, name, position, phone }) => {
   return (
     <UserCard>
-      <Box as="img" mb="20px" src={photo} alt={name} />
-      <Box as="p" mb="20px">
-        {name}
-      </Box>
+      <UserImg as="img" src={photo} alt={name} />
+      <UserText prop={name}>
+        {name.length > 30 ? sliceLongText(name) : name}
+      </UserText>
 
       <Text>{position}</Text>
-      <UserEnmail>{email}</UserEnmail>
+      <UserEnmail prop={email}>
+        {email.length > 30 ? sliceLongText(email) : email}
+      </UserEnmail>
       <Text>{phone}</Text>
     </UserCard>
   );
