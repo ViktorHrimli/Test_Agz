@@ -12,9 +12,9 @@ const getTokenFetch = async () => {
   }
 };
 
-const getUsersFetch = async (page = 1, count = 6) => {
+const getUsersFetch = async (page = 1) => {
   try {
-    const { data } = await axios.get(`users?page=${page}&count=${count}`);
+    const { data } = await axios.get(`users?page=${page}&count=6`);
     return data;
   } catch (error) {
     throw new Error(error.message);

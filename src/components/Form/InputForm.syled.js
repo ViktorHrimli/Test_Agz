@@ -56,7 +56,7 @@ const Input = styled.input`
   }
 
   :invalid:not(:placeholder-shown) {
-    border: ${p => p.theme.borders.normal} ${p => p.theme.colors.error};
+    border: ${p => p.theme.borders.bold} ${p => p.theme.colors.error};
   }
 
   :focus:invalid:not(:placeholder-shown)::after {
@@ -94,68 +94,3 @@ const Lable = styled.label`
   color: ${p => p.theme.colors.disable};
 `;
 export { Input, Radio, InputFile, InputUpload, Lable };
-
-// import { Field } from 'formik';
-// import styled from 'styled-components';
-
-// const InputName = styled(Field)`
-//   position: relative;
-//   min-width: 328px;
-//   padding: 16px 14px;
-//   background-color: transparent;
-//   border: ${p => p.theme.borders.normal} ${p => p.theme.colors.border};
-//   border-radius: ${p => p.theme.radii.sm};
-// `;
-
-// const InputEmail = styled(Field)`
-//   position: relative;
-//   min-width: 328px;
-//   padding: 16px 14px;
-//   background-color: transparent;
-//   border: ${p => p.theme.borders.normal} ${p => p.theme.colors.border};
-//   border-radius: ${p => p.theme.radii.sm};
-// `;
-
-// const LabelName = styled.label`
-//   position: absolute;
-//   top: ${p => {
-//     return !p.foc ? 15 : -10;
-//   }}px;
-//   left: 10px;
-//   color: ${p => p.theme.colors.border};
-//   background-color: ${p => {
-//     return !p.foc ? '' : p.theme.colors.background;
-//   }};
-//   padding-inline: 5px;
-//   z-index: 2;
-// `;
-
-// const LabelEmail = styled.label`
-//   position: absolute;
-//   top: ${p => {
-//     return !p.foc ? 115 : 91;
-//   }}px;
-//   left: 10px;
-//   color: ${p => p.theme.colors.border};
-//   background-color: ${p => {
-//     return !p.foc ? '' : p.theme.colors.background;
-//   }};
-//   padding-inline: 5px;
-//   z-index: 2;
-// `;
-
-// const LabelPhone = styled.label`
-//   position: absolute;
-//   top: ${p => {
-//     return !p.foc ? 215 : 191;
-//   }}px;
-//   left: 10px;
-//   color: ${p => p.theme.colors.border};
-//   background-color: ${p => {
-//     return !p.foc ? '' : p.theme.colors.background;
-//   }};
-//   padding-inline: 5px;
-//   z-index: 2;
-// `;
-
-// export { InputEmail, InputName, InputPhone, LabelEmail, LabelName, LabelPhone };

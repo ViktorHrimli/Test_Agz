@@ -22,7 +22,7 @@ const HeroBackground = styled.div`
     background-image: url(${tab});
   }
   @media screen and (min-width: 1024px) and (max-width: 2564px) {
-    padding: 164px 322px 164px 322px;
+    padding: 164px 319px 164px 320px;
     background-image: url(${desk});
   }
   @media screen and (min-width: 2565px) {

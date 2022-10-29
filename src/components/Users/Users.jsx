@@ -36,7 +36,7 @@ const Users = () => {
 
     setisLoading(true);
 
-    getUsersFetch(page, 5).then(({ users }) => {
+    getUsersFetch(page).then(({ users }) => {
       return setData(prev => prev.concat(users));
     });
 

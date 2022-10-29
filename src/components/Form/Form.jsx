@@ -4,7 +4,7 @@ import { Forms, LabelCheckBox, FormButtons, ButtonUpload } from './Form.styled';
 import { Input, InputFile, InputUpload, Radio, Lable } from './InputForm.syled';
 import { postUser, getTokenFetch } from '../ApiServise/Api';
 
-const FormRegistration = () => {
+const FormRegistration = ({ onVisible }) => {
   const [valueUpload, setValueUpload] = useState('');
   const [isButtonDisable, setIsButtonDisable] = useState(false);
   const [data, setData] = useState(null);
@@ -27,6 +27,7 @@ const FormRegistration = () => {
     setData(formData);
     setValueUpload('');
     setIsButtonDisable(false);
+    onVisible(true);
     event.currentTarget.reset();
   };
 

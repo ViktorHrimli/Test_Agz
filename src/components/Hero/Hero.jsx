@@ -6,6 +6,7 @@ const Hero = () => {
     <HeroBackground>
       <Box display="flex" flexDirection="column" alignItems="center">
         <TitleTextHero>Test assignment for front-end developer</TitleTextHero>
+
         <TextHero>
           What defines a good front-end developer is one that has skilled
           knowledge of HTML, CSS, JS with a vast understanding of User design
