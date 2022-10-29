@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { TitleText, Conteiner } from 'commonStyle/Common.styled';
+import { TitleText, Conteiner, Button } from 'commonStyle/Common.styled';
 
 const GalleryUser = styled.ul`
   display: grid;
@@ -46,5 +46,7 @@ const ConteinerUsers = styled(Conteiner)`
     padding: 140px 695px 140px 695px;
   }
 `;
-
-export { GalleryUser, TitleUsers, ConteinerUsers };
+const BtnLoadMore = styled(Button)`
+  padding: 1px 20px;
+`;
+export { GalleryUser, TitleUsers, ConteinerUsers, BtnLoadMore };

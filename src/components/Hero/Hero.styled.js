@@ -18,7 +18,7 @@ const HeroBackground = styled.div`
     padding: 40px 16px 71px 16px;
   }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
-    padding: 89px 194px 89px 194px;
+    padding: 89px 191px 89px 191px;
     background-image: url(${tab});
   }
   @media screen and (min-width: 1024px) and (max-width: 2564px) {
@@ -47,7 +47,7 @@ const TitleTextHero = styled(TitleText)`
   text-align: center;
   margin-bottom: 21px;
   @media screen and (min-width: 768px) {
-    max-width: 380px;
+    max-width: 385px;
   }
 `;
 

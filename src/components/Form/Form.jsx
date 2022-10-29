@@ -90,8 +90,8 @@ const FormRegistration = () => {
           alignItems="flex-start"
           gridGap="7px"
           mr="auto"
-          mt="25px"
-          mb="47px"
+          mt="28px"
+          mb="44px"
         >
           <Box as="p" mb="7px">
             Select your position

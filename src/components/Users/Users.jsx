@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Button } from 'commonStyle/Common.styled';
 import { UsersItems } from 'components/UsersItems/UsersItems';
-import { GalleryUser, TitleUsers, ConteinerUsers } from './Users.styled';
+import {
+  GalleryUser,
+  TitleUsers,
+  ConteinerUsers,
+  BtnLoadMore,
+} from './Users.styled';
 import { getUsersFetch } from 'components/ApiServise/Api';
 import { LoadSpiner } from 'components/LoadSpiner/LoadSpienr';
 
@@ -32,7 +36,7 @@ const Users = () => {
 
     setisLoading(true);
 
-    getUsersFetch(page).then(({ users }) => {
+    getUsersFetch(page, 5).then(({ users }) => {
       return setData(prev => prev.concat(users));
     });
 
@@ -49,9 +53,9 @@ const Users = () => {
       </GalleryUser>
       {isLoading && <LoadSpiner />}
       {isButtonShow && (
-        <Button onClick={handeClickLoadMore} type="button">
+        <BtnLoadMore onClick={handeClickLoadMore} type="button">
           Show more
-        </Button>
+        </BtnLoadMore>
       )}
     </ConteinerUsers>
   );

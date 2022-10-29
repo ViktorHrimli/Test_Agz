@@ -91,7 +91,7 @@ const Button = styled.button`
   justify-content: center;
   min-width: 100px;
   height: 34px;
-  padding: 0% 13px;
+  padding: 0 13px;
   font-size: ${theme.fontSizes.m};
   line-height: ${theme.lineHeights.body};
   border: none;
