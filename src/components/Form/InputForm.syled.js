@@ -37,8 +37,11 @@ const Radio = styled.input`
 
 const Input = styled.input`
   position: relative;
+  height: 18px;
   padding: 16px 14px;
   background-color: transparent;
+  font-size: ${p => p.theme.fontSizes.m};
+  line-height: ${p => p.theme.lineHeights.body};
   border: ${p => p.theme.borders.normal} ${p => p.theme.colors.border};
   border-radius: ${p => p.theme.radii.sm};
   @media screen and (min-width: 360px) and (max-width: 767px) {
@@ -56,9 +59,8 @@ const Input = styled.input`
     border: ${p => p.theme.borders.normal} ${p => p.theme.colors.error};
   }
 
-  ::before:invalid {
-    content: 'Error';
-    position: absolute;
+  :focus:invalid:not(:placeholder-shown)::after {
+    content: 'Error Text';
     top: 0px;
     left: 0px;
     display: inline-flex;
@@ -75,6 +77,8 @@ const InputUpload = styled(Input)`
   width: 217px;
   border-left: none;
   outline: none;
+  font-size: ${p => p.theme.fontSizes.m};
+  line-height: ${p => p.theme.lineHeights.body};
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   @media screen and (min-width: 768px) {
@@ -85,6 +89,7 @@ const InputUpload = styled(Input)`
 const Lable = styled.label`
   display: flex;
   flex-direction: column;
+  margin-top: 4px;
   font-size: ${p => p.theme.fontSizes.xs};
   color: ${p => p.theme.colors.disable};
 `;

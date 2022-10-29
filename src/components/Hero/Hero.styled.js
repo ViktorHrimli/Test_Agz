@@ -37,7 +37,7 @@ const TextHero = styled(Text)`
   text-align: center;
   margin-bottom: 32px;
   @media screen and (min-width: 768px) {
-    max-width: 380px;
+    max-width: 385px;
   }
 `;
 

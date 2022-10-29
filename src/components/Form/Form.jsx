@@ -61,6 +61,7 @@ const FormRegistration = () => {
             placeholder="Your name"
             minLength={2}
             maxLength={60}
+            title="Error"
             required
           />
           <Input
@@ -87,10 +88,14 @@ const FormRegistration = () => {
           display="flex"
           flexDirection="column"
           alignItems="flex-start"
-          gridGap="9px"
+          gridGap="7px"
           mr="auto"
+          mt="25px"
+          mb="47px"
         >
-          <p>Select your position</p>
+          <Box as="p" mb="7px">
+            Select your position
+          </Box>
           <LabelCheckBox>
             <Radio type="radio" name="checked" value="1" required min={1} />
             Frontend developer
@@ -119,7 +124,7 @@ const FormRegistration = () => {
             required
           />
 
-          <Box display="flex">
+          <Box display="flex" mb="50px">
             <ButtonUpload type="button">Upload</ButtonUpload>
             <InputUpload
               onChange={e => console.log}
@@ -129,7 +134,7 @@ const FormRegistration = () => {
           </Box>
         </label>
         <FormButtons type="submit" flag={isButtonDisable}>
-          Submit
+          Sign up
         </FormButtons>
       </Forms>
     </div>

@@ -6,7 +6,6 @@ const Forms = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-gap: 45px;
 `;
 
 const ButtonUpload = styled.button`
@@ -15,6 +14,8 @@ const ButtonUpload = styled.button`
   justify-content: center;
   width: 83px;
   background-color: transparent;
+  font-size: ${p => p.theme.fontSizes.m};
+  line-height: ${p => p.theme.lineHeights.body};
   border: 2px solid;
   border: ${p => p.theme.borders.normal} ${p => p.theme.colors.black87};
   border-radius: ${p => p.theme.radii.sm};
@@ -25,6 +26,8 @@ const ButtonUpload = styled.button`
 const LabelCheckBox = styled.label`
   display: inline-flex;
   justify-content: center;
+  font-size: ${p => p.theme.fontSizes.ms};
+  line-height: ${p => p.theme.lineHeights.body};
   grid-gap: 12px;
 `;
 
