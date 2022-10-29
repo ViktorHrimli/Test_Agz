@@ -1,18 +1,19 @@
 {
   "files": {
     "main.css": "/Test_Agz/static/css/main.7acaea2f.css",
-    "main.js": "/Test_Agz/static/js/main.0782a6e6.js",
-    "static/media/BG_Big.jpg": "/Test_Agz/static/media/BG_Big.09863c21debdf17eca4d.jpg",
-    "static/media/BG_Desktop.jpg": "/Test_Agz/static/media/BG_Desktop.2b96e77397bde68acc87.jpg",
-    "static/media/BG_Tab.jpg": "/Test_Agz/static/media/BG_Tab.eaf9d4df9ec99035d466.jpg",
-    "static/media/BG.jpg": "/Test_Agz/static/media/BG.688ffc5d4528cd1bc679.jpg",
-    "static/media/Logo.svg": "/Test_Agz/static/media/Logo.8bb55362d01d55393ccc5476d96f0c14.svg",
+    "main.js": "/Test_Agz/static/js/main.8ae5225e.js",
+    "static/media/BG_Desktop.jpg": "/Test_Agz/static/media/BG_Desktop.1d74485cfe12c3eeb0e4.jpg",
+    "static/media/BG_Big.jpg": "/Test_Agz/static/media/BG_Big.a95c2441b43081c47b47.jpg",
+    "static/media/BG_Tab.jpg": "/Test_Agz/static/media/BG_Tab.539cf085fcfae696e55c.jpg",
+    "static/media/success-image.svg": "/Test_Agz/static/media/success-image.339c5ed6e7c720962a4aea5fd5ede239.svg",
+    "static/media/BG.jpg": "/Test_Agz/static/media/BG.3b9774958a37838bcc8a.jpg",
+    "static/media/Logo.svg": "/Test_Agz/static/media/Logo.d481e29298306cef3ef13802a4f73975.svg",
     "index.html": "/Test_Agz/index.html",
     "main.7acaea2f.css.map": "/Test_Agz/static/css/main.7acaea2f.css.map",
-    "main.0782a6e6.js.map": "/Test_Agz/static/js/main.0782a6e6.js.map"
+    "main.8ae5225e.js.map": "/Test_Agz/static/js/main.8ae5225e.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.0782a6e6.js"
+    "static/js/main.8ae5225e.js"
   ]
 }
