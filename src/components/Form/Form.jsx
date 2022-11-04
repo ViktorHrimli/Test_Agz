@@ -1,14 +1,18 @@
 import { useState, createRef, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Box } from 'commonStyle/Common.styled';
 import { Forms, LabelCheckBox, FormButtons, ButtonUpload } from './Form.styled';
 import { Input, InputFile, InputUpload, Radio, Lable } from './InputForm.syled';
 import { postUser, getTokenFetch } from '../ApiServise/Api';
+import { getNewUser } from '../redux/slice';
+import imgUser from 'Images/1556866724_3.jpg';
 
 const FormRegistration = ({ onVisible }) => {
   const [valueUpload, setValueUpload] = useState('');
   const [isButtonDisable, setIsButtonDisable] = useState(false);
   const [data, setData] = useState(null);
   const [token, setToken] = useState('');
+  const dispatch = useDispatch();
 
   const notVisibleInput = createRef();
 
@@ -17,6 +21,15 @@ const FormRegistration = ({ onVisible }) => {
     const formData = new FormData();
     const { name, email, phone, checked, file } = event.currentTarget.elements;
 
+    const newUser = {
+      id: 1024,
+      name: name.value,
+      email: email.value,
+      phone: phone.value,
+      position: checked.value,
+      photo: imgUser,
+    };
+
     const id = Number(checked.value);
     formData.append('position_id', id);
     formData.append('name', name.value);
@@ -24,6 +37,7 @@ const FormRegistration = ({ onVisible }) => {
     formData.append('phone', phone.value);
     formData.append('photo', file.files[0]);
 
+    dispatch(getNewUser(newUser));
     setData(formData);
     setValueUpload('');
     setIsButtonDisable(false);

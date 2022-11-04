@@ -1,19 +1,21 @@
 import { useState, useEffect } from 'react';
 import { UsersItems } from 'components/UsersItems/UsersItems';
+import { getUsersFetch } from 'components/ApiServise/Api';
+import { LoadSpiner } from 'components/LoadSpiner/LoadSpienr';
 import {
   GalleryUser,
   TitleUsers,
   ConteinerUsers,
   BtnLoadMore,
 } from './Users.styled';
-import { getUsersFetch } from 'components/ApiServise/Api';
-import { LoadSpiner } from 'components/LoadSpiner/LoadSpienr';
+import { useSelector } from 'react-redux';
 
 const Users = () => {
   const [isLoading, setisLoading] = useState(false);
   const [isButtonShow, setIsButtonShow] = useState(true);
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
+  const newUser = useSelector(state => state.users);
 
   const handeClickLoadMore = () => {
     setPage(prev => (prev += 1));
@@ -42,6 +44,11 @@ const Users = () => {
 
     setisLoading(false);
   }, [page]);
+
+  useEffect(() => {
+    if (!newUser) return;
+    setData(prev => [...newUser, ...prev]);
+  }, [newUser]);
 
   return (
     <ConteinerUsers>
